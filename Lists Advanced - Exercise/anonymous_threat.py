@@ -10,6 +10,10 @@ def merge_items(words, start_index, end_index):
         words.insert(start_index, ''.join(result))
 
 
+def divide_items(words, index, partitions):
+    pass
+
+
 words = input().split(' ')
 while True:
     command = input().split(' ')
@@ -18,5 +22,6 @@ while True:
         merge_items(words, start_index, end_index)
         print(words)
     elif command[0] == 'divide':
-        pass
-        # TODO for later
+        index, partitions = int(command[1]), int(command[2])
+        divide_items(words, index, partitions)
+
